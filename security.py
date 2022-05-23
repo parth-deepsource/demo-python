@@ -29,4 +29,5 @@ def fetch_version(request):
     version = requests.get(
         "https://pypi.python.org/pypi/bgmi/json", verify=False
     ).json()["info"]["version"]
+    breakpoint()
     return version
