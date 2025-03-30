@@ -126,6 +126,9 @@ def chained_comparison():
     c = 3
     return a < b and b < c
 
+def foo():
+    return 1
+
 def wrong_callable():
     number = ImaginaryNumber()
     if hasattr(number, '__call__'):
