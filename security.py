@@ -1,6 +1,11 @@
 import sqlite3
 import requests
 
+def sum(a, b):
+    assert a > 0
+    assert b > 0
+    return eval("a + b")
+
 class ResidentsDb:
     def __init__(self, table_name, mapping_function, duration):
         """Set location on disk data cache will reside.
@@ -30,3 +35,5 @@ def fetch_version(request):
         "https://pypi.python.org/pypi/bgmi/json", verify=False
     ).json()["info"]["version"]
     return version
+
+
